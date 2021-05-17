@@ -9,7 +9,7 @@ we have two python scripts
 # 1: 
 The root script is running on 18.04.1-Ubuntu with python3.6 and Kivy==1.11.1 Kivy-Garden==0.1.4
 
-root files are(rootrms folder):
+root files are(root folder):
 
 main.py
 
