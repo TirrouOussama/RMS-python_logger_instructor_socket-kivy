@@ -1,0 +1,353 @@
+<liscencescreen>	
+	Label:
+		text: 'LISCENCE'
+		size: root.width*0.4, root.height*0.2
+		pos: root.width*0.3, root.height*0.8
+		bold: True
+	Label: 
+		text: "RMS software was developped by SARL and is under the following bands:"
+		pos: root.width*0.2, root.height*0.75
+		size: root.width*0.6, root.height*0.2
+		font_size: 12
+	ScrollView:
+
+		pos: root.width*0.2, root.height*0.2
+		size: root.width*0.6, root.height*0.6
+
+
+		Label:
+			id: liscence
+			font_size: 10
+			size_hint_x: 1.0
+			size_hint_y: None
+			text_size:self.width,None
+			height: self.texture_size[1]
+
+	Button:
+		text: "Agreed"
+		font_size: 12
+		pos: root.width*0.6, root.height*0.1
+		size: root.width*0.1, root.height*0.05
+		on_press: root.Agreedliscence()
+
+	Button: 
+		text: "Decline"
+		font_size: 12
+		pos: root.width*0.4, root.height*0.1
+		size: root.width*0.1, root.height*0.05
+		on_press: root.Declineliscence()
+
+
+<loginscreen>
+	Label:
+		text: "Login to RMS to continue" 
+		pos: root.width*0.2, root.height*0.85
+		size: root.width*0.6, root.height*0.2
+		font_size: 16
+		bold: True
+		italic: True
+
+	TextInput:
+		id: username
+		hint_text: "Enter username"
+		font_size: 14
+		pos: root.width*0.3, root.height*0.8
+		size: root.width*0.4, root.height*0.05
+
+	TextInput:
+		id: password
+		password: True
+		hint_text: "Enter username"
+		font_size: 14
+		pos: root.width*0.3, root.height*0.7
+		size: root.width*0.4, root.height*0.05
+
+
+	Button:
+		text: "Log In"
+		font_size: 14
+		pos: root.width*0.3, root.height*0.6
+		size: root.width*0.4, root.height*0.05
+		on_press: root.login()
+
+	Label:
+		id: wrongpass 
+		font_size: 14
+		pos: root.width*0.3, root.height*0.5
+		size: root.width*0.4, root.height*0.05
+		font_size: 12
+		italic: True
+
+
+
+	Label:
+		text: "only members of RM System are allowed to login" 
+		pos: root.width*0.01, root.height*0.1
+		size: root.width*0.4, root.height*0.01
+		font_size: 12
+		italic: True
+
+
+<mainscreen>
+	Label:
+		id: user 
+		pos: root.width*0.4, root.height*0.85
+		size: root.width*0.2, root.height*0.2
+		font_size: 16
+		bold: True
+		italic: True
+		
+
+	Label:
+		id: time
+		pos: root.width*0.05, root.height*0.85
+		size: root.width*0.2, root.height*0.2
+		font_size: 16
+		bold: True
+		italic: True
+
+	Button: 
+		text:" Log Out"
+		pos: root.width*0.8, root.height*0.925
+		size: root.width*0.1, root.height*0.04
+		font_size: 12
+		bold: True
+		italic: True
+		on_press:root.logout()
+
+	Button:
+		text:"View log"
+		pos: root.width*0.8, root.height*0.825
+		size: root.width*0.1, root.height*0.04
+		font_size: 12
+		bold: True
+		italic: True
+		on_press:root.viewlog()
+
+	Button:
+		text:"Cards"
+		pos: root.width*0.45, root.height*0.825
+		size: root.width*0.1, root.height*0.04
+		font_size: 12
+		bold: True
+		italic: True
+		on_press:root.Cards()
+
+	Button:
+
+		text:"Access Room"
+		pos: root.width*0.1, root.height*0.825
+		size: root.width*0.1, root.height*0.04
+		font_size: 12
+		bold: True
+		italic: True
+		on_press:root.access()
+
+	TextInput:
+		id: room
+		hint_text: "Room IP"
+		font_size: 12
+		pos: root.width*0.1, root.height*0.725
+		size: root.width*0.125, root.height*0.04
+
+	Label:
+		id: accessmsg
+		font_size: 12
+		pos: root.width*0.1, root.height*0.775
+		size: root.width*0.125, root.height*0.04
+		italic: True
+
+
+
+
+	Button: 
+		text:"Exit"
+		pos: root.width*0.8, root.height*0.725
+		size: root.width*0.1, root.height*0.04
+		font_size: 12
+		bold: True
+		italic: True
+		on_press:root.Exit()
+
+	Label:
+		id: logtittle
+		pos: root.width*0.2, root.height*0.65
+		size: root.width*0.1, root.height*0.04
+		font_size: 12
+		italic: True
+		bold: True
+
+	ScrollView:
+		size: root.width*0.8, root.height*0.4
+		pos: root.width*0.1, root.height*0.25
+		GridLayout:
+
+			id: pofchild
+			size_hint_y: None
+			height: self.minimum_height
+			cols: 1
+			spacing: 1
+			font_size: 12
+
+
+<Cardsscreen>
+	Label:
+		id: userCards 
+		pos: root.width*0.4, root.height*0.85
+		size: root.width*0.2, root.height*0.2
+		font_size: 16
+		bold: True
+		italic: True
+		
+
+	Label:
+		id: ctime
+		pos: root.width*0.05, root.height*0.85
+		size: root.width*0.2, root.height*0.2
+		font_size: 16
+		bold: True
+		italic: True
+
+	Button: 
+		text:"Back"
+		pos: root.width*0.8, root.height*0.925
+		size: root.width*0.1, root.height*0.04
+		font_size: 12
+		bold: True
+		italic: True
+		on_press:root.back()
+
+
+	Label:
+		text:"Cards"
+		pos: root.width*0.45, root.height*0.825
+		size: root.width*0.1, root.height*0.04
+		font_size: 14
+		bold: True
+		italic: True
+
+	Button:
+		text:"Write or Edit rfid for room"
+		pos: root.width*0.3, root.height*0.725
+		size: root.width*0.3725, root.height*0.04
+		font_size: 12
+		bold: True
+		italic: True
+		on_press:root.editrfid()
+
+	ScrollView:
+		size: root.width*0.8, root.height*0.4
+		pos: root.width*0.1, root.height*0.25
+		
+		Label
+			id: rfidlist
+			font_size: 10
+			size_hint_x: 1.0
+			size_hint_y: None
+			text_size:self.width,None
+			height: self.texture_size[1]
+
+
+<roomscreen>
+
+	Label:
+		id: rtime
+		pos: root.width*0.05, root.height*0.85
+		size: root.width*0.2, root.height*0.2
+		font_size: 16
+		bold: True
+		italic: True
+
+	Label:
+		id: roomid 
+		pos: root.width*0.4, root.height*0.85
+		size: root.width*0.2, root.height*0.2
+		font_size: 16
+		bold: True
+		italic: True
+		
+
+	Button: 
+		text:"Back"
+		pos: root.width*0.8, root.height*0.925
+		size: root.width*0.1, root.height*0.04
+		font_size: 12
+		bold: True
+		italic: True
+		on_press:root.backroom()
+		
+	Button:
+		on_press: root.firstlamponoff()
+		pos: root.width*0.1, root.height*0.7
+		size: root.width*0.12, root.height*0.05
+
+		Image:
+			source: root.firstsource
+			center_x: self.parent.center_x
+			center_y: self.parent.center_y
+	Label: 
+		text: root.firstlamp_msg
+		pos: root.width*0.2, root.height*0.7
+		size: root.width*0.2, root.height*0.05
+		italic: True
+		font_size: 12
+
+	Button:
+		on_press: root.secondlamponoff()
+		pos: root.width*0.1, root.height*0.6
+		size: root.width*0.12, root.height*0.05
+
+		Image:
+			source: root.secondsource
+			center_x: self.parent.center_x
+			center_y: self.parent.center_y
+	Label: 
+		text: root.secondlamp_msg
+		pos: root.width*0.2, root.height*0.6
+		size: root.width*0.2, root.height*0.05
+		italic: True
+		font_size: 12
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+	
+			
+
+				
+
+
+
+	
+
+
+		
+
+
+
+	
+
+			
+			
+				
+
+
+
+
+
+
+
+	
+
+
