@@ -240,7 +240,7 @@ class mainscreen(Widget):  ################ KIVY MAIN SCREEN ##### begin #######
     
         self.ids.time.text = current_time
         self.ids.logtittle.text = 'Log listning on '+ logid 
-        print(minions)             
+                     
         if logmsg != '':
             ################## updating states for machines #############
 
